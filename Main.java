@@ -1,6 +1,7 @@
+import java.util.Scanner;
 /**
- *
- * @author 
+ * A program that determines the multiplication table for a user entered number from 1-12
+ * @author Daniel Rahmani
  */
 public class Main {
 
@@ -9,7 +10,20 @@ public class Main {
    * @param args the command line arguments
    */
   public static void main(String[] args) {
-    // TODO code application logic here
+    // create a scanner for user input
+    Scanner input = new Scanner(System.in);
+
+    // ask the user for a number
+    System.out.println("Please enter an integer to create a multiplication table for");
+    int n = input.nextInt();
+
+    // create a for loop
+    for(int count = 1; count <=12; count++){
+      // multiply the number by count each time
+      int answer = count * n;
+      // display the answer from 1-12
+      System.out.println(count + " x " + n + " = " + answer);
+    }
     
   }
 }
